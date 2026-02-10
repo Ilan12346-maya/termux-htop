@@ -21,7 +21,7 @@ While this only reflects activity within the current user's scope rather than a 
 ### How to build in Termux
 To build this version in Termux, install the required dependencies and run the build script:
 ```bash
-pkg install automake autoconf ncurses-utils ncurses-dev clang make
+pkg install automake autoconf ncurses-utils ncurses clang make
 ./autogen.sh && ./configure && make
 ```
 Run it with:
