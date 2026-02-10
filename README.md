@@ -8,28 +8,11 @@
 [![Packaging status](https://repology.org/badge/tiny-repos/htop.svg)](https://repology.org/project/htop/versions)
 [![License: GPL v2+](https://img.shields.io/badge/License-GPL%20v2+-blue.svg)](COPYING?raw=true)
 
-![Screenshot of htop](docs/images/screenshot.png?raw=true)
-
-## Introduction
-
-`htop` is a cross-platform interactive process viewer.
-
-`htop` allows scrolling the list of processes vertically and horizontally to see their full command lines and related information like memory and CPU consumption.
-Also system wide information, like load average or swap usage, is shown.
-
-The information displayed is configurable through a graphical setup and can be sorted and filtered interactively.
-
-Tasks related to processes (e.g. killing and renicing) can be done without entering their PIDs.
-
-Running `htop` requires `ncurses` libraries, typically named libncurses(w).
-
-`htop` is written in C.
-
-For more information and details visit [htop.dev](https://htop.dev).
-
 ## Termux / Android Compatibility
 
 ![htop in Termux](docs/images/intermux.gif?raw=true)
+
+This project is a fork of the official [htop-dev/htop](https://github.com/htop-dev/htop) repository, modified to provide functional CPU usage reporting in the Termux environment on Android without requiring root access.
 
 Android environments typically restrict access to `/proc/stat` for non-root users, which prevents standard CPU usage reporting. This fork introduces a workaround that collects CPU data by iterating through `/proc/[pid]/task/[tid]/stat` for all processes accessible to the Termux user. 
 
@@ -45,6 +28,27 @@ Run it with:
 ```bash
 ./htop
 ```
+
+---
+
+## Introduction
+
+`htop` is a cross-platform interactive process viewer.
+
+![Screenshot of htop](docs/images/screenshot.png?raw=true)
+
+`htop` allows scrolling the list of processes vertically and horizontally to see their full command lines and related information like memory and CPU consumption.
+Also system wide information, like load average or swap usage, is shown.
+
+The information displayed is configurable through a graphical setup and can be sorted and filtered interactively.
+
+Tasks related to processes (e.g. killing and renicing) can be done without entering their PIDs.
+
+Running `htop` requires `ncurses` libraries, typically named libncurses(w).
+
+`htop` is written in C.
+
+For more information and details visit [htop.dev](https://htop.dev).
 
 ## Usage
 See the manual page (`man htop`) or the help menu (`h` or `F1` inside `htop`) for a list of supported key commands.
