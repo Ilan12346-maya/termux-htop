@@ -22,6 +22,7 @@ While this only reflects activity within the current user's scope rather than a 
 To build this version in Termux, install the required dependencies and run the build script:
 ```bash
 pkg install automake autoconf ncurses-utils ncurses clang make
+git clone https://github.com/Ilan12346-maya/termux-htop.git && cd termux-htop
 ./autogen.sh && ./configure && make
 ```
 Run it with:
